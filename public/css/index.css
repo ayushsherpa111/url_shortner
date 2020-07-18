@@ -1,0 +1,95 @@
+* {
+    font-family: "Raleway", sans-serif;
+}
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(51, 50, 50);
+    color: white;
+}
+.head {
+    width: fit-content;
+    margin: auto;
+    margin-top: 7%;
+    padding: 5px 19px;
+    text-align: center;
+}
+.head h1 {
+    font-size: 55px;
+}
+.head form {
+    padding: 5px 15px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.url_label {
+    font-size: 25px;
+}
+.head form * {
+    margin-right: 10px;
+}
+.head form input {
+    padding: 14px;
+}
+.head form input[type="text"] {
+    background-color: #444343;
+    color: white;
+    width: 332px;
+    font-weight: 900;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+}
+.head form input[type="submit"] {
+    background-color: #538000;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 18px;
+    cursor: pointer;
+    transition: all 500ms ease;
+}
+.head form input[type="submit"]:hover {
+    background-color: #649803;
+}
+.shortend {
+    margin: 0 auto;
+    text-align: center;
+    width: fit-content;
+    margin-top: 30px;
+}
+.shortend thead {
+    font-size: 25px;
+}
+.shortend thead th {
+    padding: 13px 22px;
+}
+.shortend a {
+    color: #00ffd9;
+    text-decoration: none;
+}
+.shortend tbody {
+    overflow-y: scroll;
+}
+
+.shortend tbody td {
+    padding: 6px 16px;
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: 1px white solid;
+}
+.shortend tbody tr:nth-child(odd) {
+    background-color: #444343;
+}
+.shortend tbody tr {
+    height: 2rem;
+}
+.head .error p {
+    margin-top: 15px;
+    font-size: 20px;
+    color: red;
+    text-align: center;
+}

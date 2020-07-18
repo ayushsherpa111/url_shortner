@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+    mongo:
+        container_name: mongo_url
+        image: mongo:4.0
+        restart: always
+        environment:
+            - MONGO_INITDB_ROOT_USERNAME=ayush
+            - MONGO_INITDB_ROOT_PASSWORD=sherpa
+            - MONGO_INITDB_DATABASE=url_shortner 
+        ports:
+            - '27017:27017'

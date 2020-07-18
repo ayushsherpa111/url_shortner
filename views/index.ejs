@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" type="text/css" href="/css/index.css" />
+    </head>
+    <body>
+        <div class="head">
+            <h1>URL - Shortner</h1>
+            <form action="/" method="post">
+                <label for="url" class="url_label">
+                    URL:
+                </label>
+                <input
+                    type="text"
+                    required
+                    autocomplete="off"
+                    name="url"
+                    id=""
+                />
+                <input type="submit" value="Generate" />
+            </form>
+            <div class="error">
+                <% if(error)  {%>
+                    <p><%= error %></p>
+                <% } %>
+            </div>
+        </div>
+        <div class="shortend">
+            <table>
+                <thead>
+                    <tr>
+                        <th>URL</th>
+                        <th>Shortened URL</th>
+                        <th>Visit Count</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(const y of models) {%>
+                    <tr>
+                        <td>
+                            <a href="<%= y['url'] %>">
+                                <%= y["url"] %>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="<%= y['shorten'] %>">
+                                <%= y["shorten"] %>
+                            </a>
+                        </td>
+                        <td>
+                            <%= y["visit"] %>
+                        </td>
+                    </tr>
+                    <%}%>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
